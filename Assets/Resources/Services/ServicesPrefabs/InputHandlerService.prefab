@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8391349337560738157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8391349337560738152}
+  - component: {fileID: 8391349337560738158}
+  - component: {fileID: 8391349337560738159}
+  m_Layer: 0
+  m_Name: InputHandlerService
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8391349337560738152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391349337560738157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.211186, y: 2.467453, z: -3.1389396}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8391349337560738158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391349337560738157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbdd84756a00a0a44843101d53d42540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handler: {fileID: 8391349337560738159}
+  keyBindings:
+    ForwardThrust:
+      keyCode: 0
+    BackThrust:
+      keyCode: 0
+    LeftTurn:
+      keyCode: 0
+    RightTurn:
+      keyCode: 0
+    StartFishing:
+      keyCode: 0
+    HookFish:
+      keyCode: 0
+  pathToBindings: 
+  overwirteHandlerBindings: 1
+--- !u!114 &8391349337560738159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391349337560738157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a39315a9503604b910421d3c38d41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentInputMap:
+    ForwardThrust:
+      keyCode: 32
+    BackThrust:
+      keyCode: 0
+    LeftTurn:
+      keyCode: 97
+    RightTurn:
+      keyCode: 100
+    StartFishing:
+      keyCode: 32
+    HookFish:
+      keyCode: 0

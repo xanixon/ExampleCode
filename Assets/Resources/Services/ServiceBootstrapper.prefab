@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8576676288578518436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5664937834357372302}
+  - component: {fileID: 9188785810736755595}
+  m_Layer: 0
+  m_Name: ServiceBootstrapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5664937834357372302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576676288578518436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.95201, y: 16.528812, z: -20.405565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9188785810736755595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576676288578518436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d8d5da15683d7488538f7ed1ae5353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHandler: {fileID: 8391349337560738159, guid: a5fa4927acf0cd947a7b0af4cb2aaa0a, type: 3}
+  player: {fileID: 2237976467001031139, guid: 0f724216807e7c24589d2b2dae626b47, type: 3}
+  playerCompass: {fileID: 4312561919447316326, guid: 2209adeea311f194193be80b1cdf71e2, type: 3}
+  cameraController: {fileID: 4920184927949015460, guid: f355e39e639b6f44f983133dde22b2fe, type: 3}
+  fishingHandler: {fileID: 8383253244366220244, guid: c1b709cc5fc29ff48b2e04bbdb1c2f72, type: 3}
+  questProgress: {fileID: 1412125001, guid: 288efa5b67780f143bbc2695b1fd17ca, type: 3}
+  fishplaceManager: {fileID: 8083837797534128198, guid: 56063e795eebea04fa5318f38a47effc, type: 3}
+  enemyManager: {fileID: 1827247465825895628, guid: 562f2927128faa84e9ae6a11e3a6eb3f, type: 3}
+  fishingCollector: {fileID: -1274412410597564425, guid: 9fbaa7b2879295749ba23680cd9a3de1, type: 3}
+  killsCollector: {fileID: 4822886549327217541, guid: 84701c0f320156648bd398d85c46be72, type: 3}
+  savegameManager: {fileID: 5550767672114419245, guid: 515d51645818a5b4589c63a2af4c8fb1, type: 3}
+  upgradesHandler: {fileID: 7579170344109492094, guid: 46b82782e1633c4468cd1712a2a3260d, type: 3}
+  shop: {fileID: 673098960023661217, guid: 66e879c0637eec14d850a4fa675e0687, type: 3}
+  playerMoney: {fileID: 947590897525105598, guid: 20e03ad5b719808428ba2fbc19c7b37e, type: 3}
+  pauseHandler: {fileID: 1822547803041551604, guid: 1f488f5242f87dc4da9e79506e21495e, type: 3}
