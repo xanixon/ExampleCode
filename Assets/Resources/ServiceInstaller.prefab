@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2544445057229891873}
-  - component: {fileID: 8985522553835770647}
+  - component: {fileID: 8936662300770813078}
   m_Layer: 0
   m_Name: ServiceInstaller
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8985522553835770647
+--- !u!114 &8936662300770813078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188aef16d3458f64694a470d5a27384d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _worldMotor: {fileID: 3381146442279397510, guid: 001806738f01ab44fb2570caf410ab73, type: 3}
+  _decorationSpawner: {fileID: 7054907660658611808, guid: e0c7db2f1a7957e418ba672953dde9fd, type: 3}
+  _waterSpawner: {fileID: 6310786706064800512, guid: f7557bc2b46d6a74da96eedeeb84b49b, type: 3}
+  _scoreHandler: {fileID: 6099648067413217954, guid: 89e736308c4a382478a02616a82d35f8, type: 3}
