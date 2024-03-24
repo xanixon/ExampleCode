@@ -8,6 +8,7 @@ public class WaterDrop : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (!gameObject.scene.isLoaded) return;
         _deathEffect.gameObject.SetActive(true);
         _deathEffect.transform.SetParent(null);
         _deathEffect.transform.localScale = new Vector3(1, 1, 1);
