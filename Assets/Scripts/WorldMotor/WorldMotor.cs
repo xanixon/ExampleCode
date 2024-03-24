@@ -4,13 +4,12 @@ using UnityEngine;
 
 public abstract class WorldMotor : MonoBehaviour
 {
+    public bool isRunning = true;
+    public float Speed { get { return speed; } }
     [SerializeField] protected float speed = 1;
-    [SerializeField] protected float spawnInterval = 1;
-    [SerializeField] protected List<DecorationTemplate> decorationTemplates = new List<DecorationTemplate>();
-    protected List<Transform> decorationsOnScene = new List<Transform>();
-    protected float lastSpawnTime = 0;
+    protected List<Transform> objectsOnScene = new List<Transform>();    
 
-    protected abstract void updateDecorationPositons(float speed);
-    protected abstract void spawnDecorations();
-    protected abstract void destroyOldDecorations();
+    public abstract void AddSceneObject(Transform objectToAdd);
+    protected abstract void updateSceneObjectsPositons(float speed);
+    protected abstract void destroyOldObjects();
 }

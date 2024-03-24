@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     private WorldMotor _motor;
 
     [Inject]
-    public void Construct(WorldMotor motor)
+    public void Construct(WorldMotor motor,
+                          [Inject(Id = "DecorationsSpawner")] SceneObjectsSpawner decorations,
+                          [Inject(Id = "WaterSpawner")] SceneObjectsSpawner water)
     {
         _motor = motor;
     }
