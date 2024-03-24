@@ -4,7 +4,7 @@ using UnityEngine;
 using Zenject;
 
 [RequireComponent(typeof(Animator))]
-public class AnimationHandler : MonoBehaviour
+public class VoblaRunAnimation : MonoBehaviour
 {
     [SerializeField] private float _minAnimationSpeedAt = 1;
     [SerializeField] private float _maxAnimationSpeedAt = 3;
