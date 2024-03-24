@@ -4,15 +4,13 @@ using UnityEngine;
 
 public abstract class WorldMotor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] protected float speed = 1;
+    [SerializeField] protected float spawnInterval = 1;
+    [SerializeField] protected List<DecorationTemplate> decorationTemplates = new List<DecorationTemplate>();
+    protected List<Transform> decorationsOnScene = new List<Transform>();
+    protected float lastSpawnTime = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    protected abstract void updateDecorationPositons(float speed);
+    protected abstract void spawnDecorations();
+    protected abstract void destroyOldDecorations();
 }
