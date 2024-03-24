@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913350e53356ee1499878a6d2d989058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRunning: 0
+  isRunning: 1
   speed: -1
   _destructionLinePosition: -3
   _floorMat: {fileID: 2100000, guid: 32aa0af3f20d52940acfcf0a9df2560b, type: 2}

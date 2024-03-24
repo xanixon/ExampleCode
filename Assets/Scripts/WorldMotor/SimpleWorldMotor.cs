@@ -28,6 +28,7 @@ public class SimpleWorldMotor : WorldMotor
     {
         for (int i = objectsOnScene.Count - 1;  i >= 0; i--)
         {
+            if (objectsOnScene[i] == null) { objectsOnScene.RemoveAt(i); continue; }
             if (objectsOnScene[i].position.z < _destructionLinePosition)
             {                
                 Destroy(objectsOnScene[i].gameObject);               

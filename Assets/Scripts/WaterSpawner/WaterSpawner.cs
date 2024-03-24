@@ -26,7 +26,7 @@ public class WaterSpawner : SceneObjectsSpawner
     }
     protected override void spawnDecorations()
     {
-        if (_motor.isRunning && Time.time < lastSpawnTime + spawnInterval) return;
+        if (!_motor.isRunning || Time.time < lastSpawnTime + spawnInterval) return;
         lastSpawnTime = Time.time;
         GameObject waterDrop = Instantiate(sceneObjectTemplates[0].Prefab, transform);
         int positionIndex = Random.Range(0, SpawnPositions.Length);

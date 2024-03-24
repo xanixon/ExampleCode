@@ -27,7 +27,7 @@ public class DecorationSpawner : SceneObjectsSpawner
 
     protected override void spawnDecorations()
     {
-        if (_motor.isRunning && Time.time < lastSpawnTime + spawnInterval) return;
+        if (!_motor.isRunning || Time.time < lastSpawnTime + spawnInterval) return;
 
         lastSpawnTime = Time.time;
         spawnDecorationInPoint(SpawnPositions[0]);

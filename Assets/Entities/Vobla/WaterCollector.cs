@@ -17,7 +17,7 @@ public class WaterCollector : MonoBehaviour
         if(waterDrop.layer == 4) //water layer
         {
             _score.AddScore(1);
-            waterDrop.SetActive(false);
+            Destroy(waterDrop);
         }
     }
 }
