@@ -10,19 +10,11 @@ public class GameManager : MonoBehaviour
     [Inject]
     public void Construct(WorldMotor motor,
                           [Inject(Id = "DecorationsSpawner")] SceneObjectsSpawner decorations,
-                          [Inject(Id = "WaterSpawner")] SceneObjectsSpawner water)
-    {
+                          [Inject(Id = "WaterSpawner")] SceneObjectsSpawner water,
+                          CameraController camera,
+                          [Inject(Id = "Vobla")] GameObject vobla)
+    {        
         _motor = motor;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

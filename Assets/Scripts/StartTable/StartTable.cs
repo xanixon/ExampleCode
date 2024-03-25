@@ -3,27 +3,28 @@ using Zenject;
 
 public class StartTable : MonoBehaviour
 {
-    [SerializeField] private GameObject _vobla;
+    [SerializeField] private Transform _cameraStartPosition;
+    [SerializeField] private Transform _lookAtPoint;
     private VoblaLineHandler _lineHandler;
     private VoblaRunAnimation _runAnimation;
     private WorldMotor _motor;
+    private GameObject _vobla;
 
     [Inject]
-    public void Construct(WorldMotor motor)
+    public void Construct(WorldMotor motor, 
+                         [Inject(Id = "Vobla")] GameObject vobla,
+                         CameraController camera)
     {
         _motor = motor;
         _motor.AddSceneObject(transform);
-    }
-    public void SetVobla(GameObject vobla)
-    {
         _vobla = vobla;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         _lineHandler = _vobla.GetComponent<VoblaLineHandler>();
         _runAnimation = _vobla.GetComponent<VoblaRunAnimation>();
         _lineHandler.enabled = false;
         _runAnimation.enabled = false;
+        camera.SetTarget(_lookAtPoint);
+        camera.transform.position = _cameraStartPosition.position;
+        camera.SetLookAtFlag(true);
     }
+ 
 }

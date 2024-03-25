@@ -49,3 +49,4 @@ MonoBehaviour:
   _waterSpawner: {fileID: 6310786706064800512, guid: f7557bc2b46d6a74da96eedeeb84b49b, type: 3}
   _scoreHandler: {fileID: 6099648067413217954, guid: 89e736308c4a382478a02616a82d35f8, type: 3}
   _baseUIHint: {fileID: 4523083078132197008, guid: 072f619cf665d414a9f0ae117ec5544b, type: 3}
+  _cameraController: {fileID: 4920184927949015460, guid: f355e39e639b6f44f983133dde22b2fe, type: 3}

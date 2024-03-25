@@ -11,13 +11,15 @@ public class TableVobla : InteractableTableObject
     private Animator _anim;
     private VoblaLineHandler _lineHandler;
     private VoblaRunAnimation _runAnimation;
-
     private WorldMotor _motor;
+    private CameraController _camera;
 
     [Inject]
-    public void Construct(WorldMotor motor)
+    public void Construct(WorldMotor motor,                         
+                         CameraController camera)
     {
         _motor  = motor;
+        _camera = camera;
     }
     private void Awake()
     {
@@ -31,6 +33,8 @@ public class TableVobla : InteractableTableObject
         _runAnimation.enabled = true;
         _motor.isRunning = true;
         _anim.SetTrigger("Run");
+        _camera.SetLookAtFlag(false);
+        _camera.SetTarget(transform);
         Destroy(this);
     }
 

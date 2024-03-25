@@ -5,17 +5,16 @@ using Zenject;
 
 public class ThirdPersonCamera : CameraController
 {
-    [SerializeField] private bool _useFixedUpdate = false;
-    [SerializeField] private bool lookAt = true;
-    [SerializeField] private bool useLocalOffset;
-    [SerializeField] private Vector3 offset;
-    [SerializeField] private float smoothness = 20;
-    [SerializeField] private Transform pointToLookAt = null;
-    private Transform tr;
+    [SerializeField] private bool _useFixedUpdate = false;    
+    [SerializeField] private bool _useLocalOffset;
+    [SerializeField] private Vector3 _offset;
+    [SerializeField] private float _smoothness = 20;
+    [SerializeField] private Transform _pointToLookAt = null;
+    private Transform _tr;
     // Start is called before the first frame update
     void Start()
     {
-        tr = transform;
+        _tr = transform;
     }
 
     // Update is called once per frame
@@ -37,26 +36,26 @@ public class ThirdPersonCamera : CameraController
         Vector3 resultOffset = getCameraOffset(target);
         targetCameraPos = target.position + resultOffset;
 
-        tr.position = Vector3.Lerp(tr.position, targetCameraPos, smoothness * Time.deltaTime);
-        if (lookAt)
+        _tr.position = Vector3.Lerp(_tr.position, targetCameraPos, _smoothness * Time.deltaTime);
+        if (_lookAt)
         {
             Transform lookAtTarget;
-            if (pointToLookAt) lookAtTarget = pointToLookAt;
+            if (_pointToLookAt) lookAtTarget = _pointToLookAt;
             else lookAtTarget = target;
-            tr.LookAt(lookAtTarget);
+            _tr.LookAt(lookAtTarget);
         }
     }
 
     private Vector3 getCameraOffset(Transform target)
     {
         Vector3 resultOffset;
-        if (useLocalOffset)
+        if (_useLocalOffset)
         {
-            resultOffset = target.forward * offset.z + target.up * offset.y + target.right * offset.x;
+            resultOffset = target.forward * _offset.z + target.up * _offset.y + target.right * _offset.x;
         }
         else
         {
-            resultOffset = offset;
+            resultOffset = _offset;
         }
         return resultOffset;
     }   
