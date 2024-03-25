@@ -5,6 +5,7 @@ using Zenject;
 
 public class ThirdPersonCamera : CameraController
 {
+    [SerializeField] private bool _useFixedUpdate = false;
     [SerializeField] private bool lookAt = true;
     [SerializeField] private bool useLocalOffset;
     [SerializeField] private Vector3 offset;
@@ -19,6 +20,16 @@ public class ThirdPersonCamera : CameraController
 
     // Update is called once per frame
     void FixedUpdate()
+    {
+        if(_useFixedUpdate) trackTarget();
+    }
+
+    private void Update()
+    {
+        if (!_useFixedUpdate) trackTarget();
+    }
+
+    private void trackTarget()
     {
         if (target == null) return;
 
