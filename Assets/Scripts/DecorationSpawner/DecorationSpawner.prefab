@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b7f9c5ecb7f3749a331da1199841d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPositions:
+  - {x: 2.5, y: 0, z: 7}
+  - {x: -1.5, y: 0, z: 7}
   sceneObjectTemplates:
   - Width: 1.5
     Weight: 8
@@ -55,6 +58,3 @@ MonoBehaviour:
     Weight: 1
     Prefab: {fileID: 6106131408582227635, guid: 00c1f8a5aff9f12458a079223a40980d, type: 3}
   spawnInterval: 1
-  SpawnPositions:
-  - {x: 2.5, y: 0, z: 7}
-  - {x: -1, y: 0, z: 7}

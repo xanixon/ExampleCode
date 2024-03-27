@@ -44,11 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4db3a800f795cc4aa6b61ead5fa8ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneObjectTemplates:
-  - Weight: 1
-    Prefab: {fileID: 5571527029253280419, guid: 825895c7ec6a4994ab2762652868421e, type: 3}
-  spawnInterval: 1
-  SpawnPositions:
+  spawnPositions:
   - {x: 0, y: 0, z: 7}
   - {x: 0.5, y: 0, z: 7}
   - {x: 1, y: 0, z: 7}
+  sceneObjectTemplates:
+  - Width: 1
+    Weight: 1
+    Prefab: {fileID: 5571527029253280419, guid: 825895c7ec6a4994ab2762652868421e, type: 3}
+  spawnInterval: 1

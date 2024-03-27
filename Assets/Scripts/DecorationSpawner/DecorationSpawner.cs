@@ -5,13 +5,6 @@ using Zenject;
 
 public class DecorationSpawner : SceneObjectsSpawner
 {
-    [SerializeField] private Vector3[] SpawnPositions;
-    private WorldMotor _motor;
-    [Inject]
-    public void Construct(WorldMotor motor)
-    {
-        _motor = motor;
-    }
     private void Start()
     {
         foreach (var decoration in sceneObjectTemplates)
@@ -20,18 +13,10 @@ public class DecorationSpawner : SceneObjectsSpawner
         }
     }
 
-    private void Update()
-    {
-        spawnDecorations();
-    }
-
-    protected override void spawnDecorations()
-    {
-        if (!_motor.isRunning || Time.time < lastSpawnTime + spawnInterval) return;
-
-        lastSpawnTime = Time.time;
-        spawnDecorationInPoint(SpawnPositions[0]);
-        spawnDecorationInPoint(SpawnPositions[1]);
+    protected override void spawnSceneObject()
+    {           
+        spawnDecorationInPoint(spawnPositions[0]);
+        spawnDecorationInPoint(spawnPositions[1]);
     }
 
     private void spawnDecorationInPoint(Vector3 point)
@@ -47,8 +32,8 @@ public class DecorationSpawner : SceneObjectsSpawner
 
                 newDecorationObject.transform.position = point;
                 newDecorationObject.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-                _motor.AddSceneObject(newDecorationObject.transform);
-                spawnInterval = decoration.Width / Mathf.Abs(_motor.Speed);
+                motor.AddSceneObject(newDecorationObject.transform);
+                spawnInterval = decoration.Width / Mathf.Abs(motor.Speed);
                 break;
             }
         }
@@ -56,8 +41,8 @@ public class DecorationSpawner : SceneObjectsSpawner
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        foreach (Vector3 spawnPositions in SpawnPositions)
+        Gizmos.color = Color.yellow;
+        foreach (Vector3 spawnPositions in spawnPositions)
         {
             Gizmos.DrawWireSphere(spawnPositions, 0.2f);
         }
