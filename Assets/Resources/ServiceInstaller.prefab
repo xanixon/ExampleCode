@@ -47,6 +47,10 @@ MonoBehaviour:
   _worldMotor: {fileID: 3381146442279397510, guid: 001806738f01ab44fb2570caf410ab73, type: 3}
   _decorationSpawner: {fileID: 7054907660658611808, guid: e0c7db2f1a7957e418ba672953dde9fd, type: 3}
   _waterSpawner: {fileID: 6310786706064800512, guid: f7557bc2b46d6a74da96eedeeb84b49b, type: 3}
+  _obstacleSpawner: {fileID: 6198418048145439196, guid: 817d98a607b8c9049a0dc48d622b1670, type: 3}
   _scoreHandler: {fileID: 6099648067413217954, guid: 89e736308c4a382478a02616a82d35f8, type: 3}
   _baseUIHint: {fileID: 4523083078132197008, guid: 072f619cf665d414a9f0ae117ec5544b, type: 3}
   _cameraController: {fileID: 4920184927949015460, guid: f355e39e639b6f44f983133dde22b2fe, type: 3}
+  _gameOverHandler: {fileID: 5570047442567390251, guid: dd4ba088c7ecac14bb243a6b959279da, type: 3}
+  _pauseHandler: {fileID: 1822547803041551604, guid: 1f488f5242f87dc4da9e79506e21495e, type: 3}
+  _brokenBeer: {fileID: -2905006879291204869, guid: bfd7b6fb61c5caa4e98344288a3e2fd8, type: 3}
