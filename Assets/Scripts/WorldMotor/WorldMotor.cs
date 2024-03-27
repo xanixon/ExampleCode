@@ -10,6 +10,7 @@ public abstract class WorldMotor : MonoBehaviour
     protected List<Transform> objectsOnScene = new List<Transform>();    
 
     public abstract void AddSceneObject(Transform objectToAdd);
+    public abstract void CleanUp();
     protected abstract void updateSceneObjectsPositons(float speed);
     protected abstract void destroyOldObjects();
 }

@@ -60,4 +60,13 @@ public class SimpleWorldMotor : WorldMotor
         
     }
 
+    public override void CleanUp()
+    {
+        for (int i = objectsOnScene.Count - 1; i >= 0; i--)
+        {
+            if (objectsOnScene[i].gameObject != null)
+                Destroy(objectsOnScene[i].gameObject);
+            objectsOnScene.RemoveAt(i);
+        }
+    }
 }
