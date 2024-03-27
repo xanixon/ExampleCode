@@ -5,16 +5,18 @@ using Zenject;
 
 public class GameManager : MonoBehaviour
 {
-    private WorldMotor _motor;
 
     [Inject]
     public void Construct(WorldMotor motor,
                           [Inject(Id = "DecorationsSpawner")] SceneObjectsSpawner decorations,
                           [Inject(Id = "WaterSpawner")] SceneObjectsSpawner water,
+                          [Inject(Id = "ObstacleSpawner")] SceneObjectsSpawner obstacles,
                           CameraController camera,
-                          [Inject(Id = "Vobla")] GameObject vobla)
+                          [Inject(Id = "Vobla")] GameObject vobla,
+                          GameOverHandler gameOver,
+                          PauseHandler pause)
     {        
-        _motor = motor;
+        
     }
     
 }
