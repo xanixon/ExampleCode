@@ -32,15 +32,16 @@ public class TableVobla : InteractableTableObject
         _lineHandler.enabled = true;
         _runAnimation.enabled = true;
         _motor.isRunning = true;
-        _anim.SetTrigger("Run");
-        _camera.SetLookAtFlag(false);
         _camera.SetTarget(transform);
+        _camera.SetLookAtPoint(transform); 
+        hint.SetHint("");
         Destroy(this);
     }
 
     public override void Wiggle()
     {
         _anim.SetTrigger("Wiggle");
+        _camera.SetTarget(transform);
     }
 
 }
