@@ -13,4 +13,9 @@ public class ScoreHandler : MonoBehaviour
         Score += value;
         OnScoreChanged?.Invoke(Score);
     }
+
+    public void CleanUp()
+    {
+        Score = 0;
+    }
 }
