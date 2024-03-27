@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 98b7c977fd262264cbd7e7fd7b76827d
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -1248280439263417783
+    second: LowerShard|BeerPlashAction
+  - first:
+      74: 1246844194097746978
+    second: LowerShard|LowerShardAction
+  - first:
+      74: 4683944515966108724
+    second: LowerShard|UpperShardAction
+  - first:
+      74: -5908966455249560531
+    second: BeerPlash|BeerPlashAction
+  - first:
+      74: -6431720545585720634
+    second: BeerPlash|LowerShardAction
+  - first:
+      74: -8584721160400497058
+    second: BeerPlash|UpperShardAction
+  - first:
+      74: -2063355346287828423
+    second: UpperShard|BeerPlashAction
+  - first:
+      74: -5941451419277029165
+    second: UpperShard|LowerShardAction
+  - first:
+      74: 2872930354894452781
+    second: UpperShard|UpperShardAction
+  - first:
+      74: -7224311829325693792
+    second: LowerShardAction
+  - first:
+      74: -7509962392377599507
+    second: LowerShard|Action
+  - first:
+      74: 6139631364169733282
+    second: BeerPlash|Action
+  - first:
+      74: 2939980423165889449
+    second: UpperShard|Action
+  - first:
+      74: 1320615091814198979
+    second: UpperShardAction
+  - first:
+      74: 972707862074868243
+    second: LowerShard|Action.001
+  - first:
+      74: -7551455692342333384
+    second: LowerShard|Action.003
+  - first:
+      74: 3474952073053689656
+    second: LowerShard|Combined
+  - first:
+      74: -3643037784733002165
+    second: BeerPlash|Action.001
+  - first:
+      74: -269644576520773464
+    second: BeerPlash|Action.003
+  - first:
+      74: 849915764964493109
+    second: BeerPlash|Combined
+  - first:
+      74: -7916612926181826530
+    second: UpperShard|Action.001
+  - first:
+      74: 7485909102478611166
+    second: UpperShard|Action.003
+  - first:
+      74: -5339349189299225915
+    second: UpperShard|Combined
+  - first:
+      74: -4629530646413675700
+    second: BeerMug|PlashAction
+  - first:
+      74: 2578613164782254366
+    second: Shard|PlashAction
+  - first:
+      74: 7586724402625180242
+    second: Plash|PlashAction
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
