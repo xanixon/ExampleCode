@@ -23,7 +23,7 @@ public class SimpleVoblaLineHandler : VoblaLineHandler
     void Update()
     {
         lineControl(currentLine);
-        tempInputHandler();
+       // tempInputHandler();
     }
 
     public override void ChangeLine(int direction)

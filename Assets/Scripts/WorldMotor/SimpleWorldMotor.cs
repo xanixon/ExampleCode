@@ -64,7 +64,7 @@ public class SimpleWorldMotor : WorldMotor
     {
         for (int i = objectsOnScene.Count - 1; i >= 0; i--)
         {
-            if (objectsOnScene[i].gameObject != null)
+            if (objectsOnScene[i] != null)
                 Destroy(objectsOnScene[i].gameObject);
             objectsOnScene.RemoveAt(i);
         }

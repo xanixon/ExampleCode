@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _worldMotor: {fileID: 3381146442279397510, guid: 001806738f01ab44fb2570caf410ab73, type: 3}
+  _inputHandler: {fileID: 2530831233644231984, guid: 0506933f21a932740913b52033a5c45c, type: 3}
   _decorationSpawner: {fileID: 7054907660658611808, guid: e0c7db2f1a7957e418ba672953dde9fd, type: 3}
   _waterSpawner: {fileID: 6310786706064800512, guid: f7557bc2b46d6a74da96eedeeb84b49b, type: 3}
   _obstacleSpawner: {fileID: 6198418048145439196, guid: 817d98a607b8c9049a0dc48d622b1670, type: 3}

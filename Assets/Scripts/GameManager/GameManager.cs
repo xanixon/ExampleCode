@@ -5,9 +5,9 @@ using Zenject;
 
 public class GameManager : MonoBehaviour
 {
-
     [Inject]
     public void Construct(WorldMotor motor,
+                          InputHandler input,
                           [Inject(Id = "DecorationsSpawner")] SceneObjectsSpawner decorations,
                           [Inject(Id = "WaterSpawner")] SceneObjectsSpawner water,
                           [Inject(Id = "ObstacleSpawner")] SceneObjectsSpawner obstacles,
