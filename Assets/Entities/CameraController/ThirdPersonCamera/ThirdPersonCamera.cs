@@ -9,7 +9,7 @@ public class ThirdPersonCamera : CameraController
     [SerializeField] private bool _useLocalOffset;
     [SerializeField] private Vector3 _offset;
     [SerializeField] private float _smoothness = 20;
-    [SerializeField] private Transform _pointToLookAt = null;
+    
     private Transform _tr;
     // Start is called before the first frame update
     void Start()
@@ -20,15 +20,15 @@ public class ThirdPersonCamera : CameraController
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(_useFixedUpdate) trackTarget();
+        if(_useFixedUpdate) trackTarget(Time.fixedDeltaTime);
     }
 
     private void Update()
     {
-        if (!_useFixedUpdate) trackTarget();
+        if (!_useFixedUpdate) trackTarget(Time.deltaTime);
     }
 
-    private void trackTarget()
+    private void trackTarget(float deltaTime)
     {
         if (target == null) return;
 
@@ -36,13 +36,15 @@ public class ThirdPersonCamera : CameraController
         Vector3 resultOffset = getCameraOffset(target);
         targetCameraPos = target.position + resultOffset;
 
-        _tr.position = Vector3.Lerp(_tr.position, targetCameraPos, _smoothness * Time.deltaTime);
+        _tr.position = Vector3.Lerp(_tr.position, targetCameraPos, _smoothness * deltaTime);
         if (_lookAt)
         {
             Transform lookAtTarget;
-            if (_pointToLookAt) lookAtTarget = _pointToLookAt;
+            if (pointToLookAt) lookAtTarget = pointToLookAt;
             else lookAtTarget = target;
-            _tr.LookAt(lookAtTarget);
+            Vector3 dirToTarget = lookAtTarget.position - _tr.position;
+            Quaternion targetRotation = Quaternion.LookRotation(dirToTarget);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, _smoothness * deltaTime);
         }
     }
 

@@ -102,5 +102,5 @@ MonoBehaviour:
   _useFixedUpdate: 0
   _useLocalOffset: 0
   _offset: {x: 0, y: 0.6, z: -0.7}
-  _smoothness: 20
+  _smoothness: 2
   _pointToLookAt: {fileID: 0}
