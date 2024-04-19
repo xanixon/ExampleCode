@@ -8,7 +8,7 @@ public class SimpleVoblaLineHandler : VoblaLineHandler
     [SerializeField] private float _transitionSpeed = 1;
     [SerializeField] private float _jumpForce = 10;
 
-    private bool jumpReady = true;
+    private bool jumpReady = false;
     private Transform tr;
     private Rigidbody rb;
     // Start is called before the first frame update
