@@ -27,7 +27,6 @@ public class InputHandler : MonoBehaviour
         if (currentInputMap.Pause.CheckHit()) Pause?.Invoke();
         if(currentInputMap.Jump.CheckHit()) Jump?.Invoke();
         float lineChange = currentInputMap.ChangeLine.GetFloat();
-        Debug.Log(lineChange);
         if (lineChange != 0)
             ChangeLine((int)lineChange);
     }

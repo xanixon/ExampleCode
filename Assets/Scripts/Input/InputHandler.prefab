@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4274077562989550229}
   - component: {fileID: 2530831233644231984}
-  - component: {fileID: -243790844951169781}
+  - component: {fileID: 3337985712039693928}
   m_Layer: 0
   m_Name: InputHandler
   m_TagString: Untagged
@@ -46,23 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInputMap:
-    ForwardThrust:
+    ChangeLine:
       keyCode: 0
-    BackThrust:
-      keyCode: 0
-    LeftTurn:
-      keyCode: 0
-    RightTurn:
-      keyCode: 0
-    StartFishing:
-      keyCode: 0
-    HookFish:
-      keyCode: 0
-    Bonk:
+    Jump:
       keyCode: 0
     Pause:
       keyCode: 0
---- !u!114 &-243790844951169781
+--- !u!114 &3337985712039693928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,25 +61,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5367628870219525270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbdd84756a00a0a44843101d53d42540, type: 3}
+  m_Script: {fileID: 11500000, guid: f5d953828203b69468539a6ea78e2925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   keyBindings:
-    ForwardThrust:
+    ChangeLine:
       keyCode: 0
-    BackThrust:
-      keyCode: 0
-    LeftTurn:
-      keyCode: 0
-    RightTurn:
-      keyCode: 0
-    StartFishing:
-      keyCode: 0
-    HookFish:
-      keyCode: 0
-    Bonk:
+    Jump:
       keyCode: 0
     Pause:
       keyCode: 0
   pathToBindings: 
   overwirteHandlerBindings: 1
+  PathsToConfig: []
+  TargetPlatform: 1

@@ -3,12 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(InputHandler))]
 public class BindingsHandler : MonoBehaviour
 { 
-    [SerializeField] private InputMap keyBindings;
-    [SerializeField] private string pathToBindings;
-    [SerializeField] private bool overwirteHandlerBindings = true;
-    private InputHandler handler;
+    [SerializeField] protected InputMap keyBindings;
+    [SerializeField] protected string pathToBindings;
+    [SerializeField] protected bool overwirteHandlerBindings = true;
+    protected InputHandler handler;
 
-    private void Start()
+    protected virtual void Start()
     {
         handler = GetComponent<InputHandler>();
         keyBindings = new InputMap("");
