@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleWorldMotor : WorldMotor
 {
     [SerializeField] private float _destructionLinePosition = -10;
+    [SerializeField] private float _speedGrowth = 0.01f;
 
     [SerializeField] private Material _floorMat;
     [SerializeField] private Material _wallMat;
@@ -16,9 +17,9 @@ public class SimpleWorldMotor : WorldMotor
     {
         if (!isRunning) return;
         destroyOldObjects();
-        updateSceneObjectsPositons(speed);
+        updateSceneObjectsPositons(-speed);
+        AddSpeed(_speedGrowth * Time.deltaTime);
     }
-
 
     public override void AddSceneObject(Transform objectToAdd)
     {

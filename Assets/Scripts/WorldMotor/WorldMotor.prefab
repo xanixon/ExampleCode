@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRunning: 0
-  speed: -1
+  speed: 1
+  minSpeed: 0.5
+  maxSpeed: 2
   _destructionLinePosition: -3
   _floorMat: {fileID: 2100000, guid: 32aa0af3f20d52940acfcf0a9df2560b, type: 2}
   _wallMat: {fileID: 2100000, guid: 81c615438219374479faf19531ca9c6a, type: 2}
