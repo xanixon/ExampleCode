@@ -26,9 +26,4 @@ public abstract class InteractableTableObject : MonoBehaviour
     {
         Interact();
     }
-
-    private void OnMouseExit()
-    {
-        hint.SetHint("");
-    }
 }

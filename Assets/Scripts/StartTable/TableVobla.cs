@@ -8,6 +8,7 @@ using Zenject;
 [RequireComponent(typeof(VoblaRunAnimation))]
 public class TableVobla : InteractableTableObject
 {
+    [SerializeField] private Transform _lookAtPoint;
     private Animator _anim;
     private VoblaLineHandler _lineHandler;
     private VoblaRunAnimation _runAnimation;
@@ -33,7 +34,7 @@ public class TableVobla : InteractableTableObject
         _runAnimation.enabled = true;
         _motor.isRunning = true;
         _camera.SetTarget(transform);
-        _camera.SetLookAtPoint(transform); 
+        _camera.SetLookAtPoint(_lookAtPoint); 
         hint.SetHint("");
         Destroy(this);
     }
