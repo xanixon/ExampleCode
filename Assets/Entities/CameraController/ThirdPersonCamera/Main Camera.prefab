@@ -97,10 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992e62adf8e1e3049aabd1620ef774e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointToLookAt: {fileID: 0}
   target: {fileID: 0}
   _lookAt: 1
   _useFixedUpdate: 0
   _useLocalOffset: 0
-  _offset: {x: 0, y: 0.6, z: -0.7}
-  _smoothness: 2
-  _pointToLookAt: {fileID: 0}
+  _offset: {x: 0, y: 0.7, z: -0.55}
+  _smoothness: 6
