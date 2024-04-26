@@ -5,7 +5,7 @@ using Zenject;
 
 public class ObstaclesSpawner : SceneObjectsSpawner
 {
-    [SerializeField] private float _maxSpawnInterval = 5;
+    [SerializeField] private float _maxSpawnInterval = 3;
     protected override void spawnSceneObject()
     {
         SceneObjectsTemplate selectedTemplate = GetObjectToSpawn();
@@ -13,7 +13,8 @@ public class ObstaclesSpawner : SceneObjectsSpawner
         int positionIndex = Random.Range(0, spawnPositions.Length);
         obstacle.transform.position = spawnPositions[positionIndex];
         motor.AddSceneObject(obstacle.transform);
-        spawnInterval = Random.Range(0, _maxSpawnInterval);
+        float minSpawnInterval = selectedTemplate.Width / Mathf.Abs(motor.Speed);
+        spawnInterval = Random.Range(minSpawnInterval, _maxSpawnInterval);
     }
 
     private void OnDrawGizmos()

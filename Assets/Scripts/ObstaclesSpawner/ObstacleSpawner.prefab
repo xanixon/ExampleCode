@@ -49,7 +49,8 @@ MonoBehaviour:
   - {x: 0.3, y: 0, z: 7}
   - {x: 0.6, y: 0, z: 7}
   sceneObjectTemplates:
-  - Width: 0.1
+  - Width: 0.5
     Weight: 1
     Prefab: {fileID: 7205446866306886278, guid: bfd7b6fb61c5caa4e98344288a3e2fd8, type: 3}
-  spawnInterval: 5
+  spawnInterval: 3
+  _maxSpawnInterval: 3
