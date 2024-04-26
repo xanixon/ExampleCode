@@ -28,4 +28,9 @@ public class PauseHandler : MonoBehaviour
         SceneManager.LoadScene(_mainMenuSceneName);
         Paused = false;
     }
+
+    private void OnDestroy()
+    {
+        if (Paused) Paused = false;
+    }
 }

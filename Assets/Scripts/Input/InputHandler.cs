@@ -10,7 +10,7 @@ public class InputHandler : MonoBehaviour
     public event Action Jump;
     public event Action Pause;
 
-    [SerializeField] private InputMap currentInputMap;
+    [SerializeField] private InputMap _currentInputMap;
 
     [Inject]
     public void Construct([Inject(Id = "Vobla")] GameObject player, PauseHandler pause)
@@ -24,15 +24,15 @@ public class InputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {     
-        if (currentInputMap.Pause.CheckHit()) Pause?.Invoke();
-        if(currentInputMap.Jump.CheckHit()) Jump?.Invoke();
-        float lineChange = currentInputMap.ChangeLine.GetFloat();
+        if (_currentInputMap.Pause.CheckHit()) Pause?.Invoke();
+        if(_currentInputMap.Jump.CheckHit()) Jump?.Invoke();
+        float lineChange = _currentInputMap.ChangeLine.GetFloat();
         if (lineChange != 0)
             ChangeLine((int)lineChange);
     }
 
     public void SetInputMap(InputMap inputMap)
     {
-        currentInputMap = inputMap;
+        _currentInputMap = inputMap;
     }
 }
