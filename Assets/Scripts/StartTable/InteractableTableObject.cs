@@ -6,24 +6,26 @@ using Zenject;
 public abstract class InteractableTableObject : MonoBehaviour
 {
     public string HintText;
-    public abstract void Interact();
-    public abstract void Wiggle();
-
+    public float CameraReturnDelay = 2;
+    protected CameraController followingCamera;
     protected BaseUIHint hint;
+    public abstract void Interact();
 
     [Inject]
-    public void Construct(BaseUIHint hint)
+    public void Construct(BaseUIHint hint, CameraController camera)
     {
         this.hint = hint;
-    }
-    protected virtual void OnMouseEnter()
-    {
-        hint.SetHint(HintText);
-        Wiggle();
+        followingCamera = camera;
     }
 
     protected virtual void OnMouseDown()
     {
+        hint.SetHint(HintText);
         Interact();
+    }
+
+    protected virtual void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 }

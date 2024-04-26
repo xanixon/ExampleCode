@@ -13,14 +13,11 @@ public class TableVobla : InteractableTableObject
     private VoblaLineHandler _lineHandler;
     private VoblaRunAnimation _runAnimation;
     private WorldMotor _motor;
-    private CameraController _camera;
 
     [Inject]
-    public void Construct(WorldMotor motor,                         
-                         CameraController camera)
+    public void Construct(WorldMotor motor)
     {
         _motor  = motor;
-        _camera = camera;
     }
     private void Awake()
     {
@@ -28,21 +25,25 @@ public class TableVobla : InteractableTableObject
         _lineHandler = GetComponent<VoblaLineHandler>();
         _runAnimation = GetComponent<VoblaRunAnimation>();
     }
+    void OnMouseEnter()
+    {
+        Wiggle();
+    }
     public override void Interact()
     {
         _lineHandler.enabled = true;
         _runAnimation.enabled = true;
         _motor.isRunning = true;
-        _camera.SetTarget(transform);
-        _camera.SetLookAtPoint(_lookAtPoint); 
+        followingCamera.SetTarget(transform);
+        followingCamera.SetLookAtPoint(_lookAtPoint); 
         hint.SetHint("");
         Destroy(this);
     }
 
-    public override void Wiggle()
+    public void Wiggle()
     {
         _anim.SetTrigger("Wiggle");
-        _camera.SetTarget(transform);
+        followingCamera.SetTarget(transform);
     }
 
 }
