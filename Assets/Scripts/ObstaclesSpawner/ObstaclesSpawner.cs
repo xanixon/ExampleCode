@@ -6,16 +6,10 @@ using Zenject;
 public class ObstaclesSpawner : SceneObjectsSpawner
 {
     [SerializeField] private float _maxSpawnInterval = 5;
-    private BrokenBeerMug.Factory _factory;
-    [Inject]
-    public void Construct(BrokenBeerMug.Factory mugFactory)
-    {
-        _factory = mugFactory;
-    }
     protected override void spawnSceneObject()
     {
-        GameObject obstacle = _factory.Create().gameObject;
-        obstacle.transform.parent = transform;
+        SceneObjectsTemplate selectedTemplate = GetObjectToSpawn();
+        GameObject obstacle = Instantiate(selectedTemplate.Prefab, transform);
         int positionIndex = Random.Range(0, spawnPositions.Length);
         obstacle.transform.position = spawnPositions[positionIndex];
         motor.AddSceneObject(obstacle.transform);

@@ -28,7 +28,5 @@ public class ServiceInstaller : MonoInstaller
         Container.Bind<CameraController>().FromComponentInNewPrefab(_cameraController).AsSingle().Lazy();
         Container.Bind<GameOverHandler>().FromComponentInNewPrefab(_gameOverHandler).AsSingle().Lazy();
         Container.Bind<PauseHandler>().FromComponentInNewPrefab(_pauseHandler).AsSingle().Lazy();
-
-        Container.BindFactory<BrokenBeerMug, BrokenBeerMug.Factory>().FromComponentInNewPrefab(_brokenBeer).AsSingle();
     }
 }

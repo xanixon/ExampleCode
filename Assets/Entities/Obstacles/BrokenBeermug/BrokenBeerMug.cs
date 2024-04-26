@@ -18,6 +18,4 @@ public class BrokenBeerMug : MonoBehaviour
         _anim.Play();
         _mug.SetActive(true);
     }
-
-    public class Factory : PlaceholderFactory<BrokenBeerMug> { }
 }
