@@ -50,7 +50,7 @@ public class SimpleVoblaLineHandler : VoblaLineHandler
                                    _transitionSpeed * Time.deltaTime);
     }
 
-    protected void jumpControl()
+    protected override void jumpControl()
     {
         if(_jumpTrigger)
         {
