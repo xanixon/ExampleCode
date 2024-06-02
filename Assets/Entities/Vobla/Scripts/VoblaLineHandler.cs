@@ -11,6 +11,7 @@ public abstract class VoblaLineHandler : MonoBehaviour
     public abstract void ChangeLine(int direction);
     public abstract void Jump();
     protected abstract void lineControl(int currentLine);
+    protected abstract void jumpControl();
 
     
 }

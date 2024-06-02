@@ -8,7 +8,8 @@ public class SimpleVoblaLineHandler : VoblaLineHandler
     [SerializeField] private float _transitionSpeed = 1;
     [SerializeField] private float _jumpForce = 10;
 
-    private bool jumpReady = false;
+    private bool _jumpTrigger = false;
+    private bool _jumpReady = false;
     private Transform tr;
     private Rigidbody rb;
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class SimpleVoblaLineHandler : VoblaLineHandler
     void Update()
     {
         lineControl(currentLine);
-       // tempInputHandler();
+        jumpControl();
     }
 
     public override void ChangeLine(int direction)
@@ -36,10 +37,10 @@ public class SimpleVoblaLineHandler : VoblaLineHandler
     }
     public override void Jump()
     {
-        if (jumpReady)
+        if (_jumpReady)
         {
-            rb.AddForce(new Vector3(0, 1, 0) * _jumpForce, ForceMode.VelocityChange);
-            jumpReady = false;
+            _jumpReady = false;
+            _jumpTrigger = true;           
         }
     }
     protected override void lineControl(int line)
@@ -49,23 +50,18 @@ public class SimpleVoblaLineHandler : VoblaLineHandler
                                    _transitionSpeed * Time.deltaTime);
     }
 
-    protected void tempInputHandler()
+    protected override void jumpControl()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(_jumpTrigger)
         {
-            Jump();
+            _jumpTrigger = false;
+            rb.AddForce(new Vector3(0, 1, 0) * _jumpForce, ForceMode.VelocityChange);            
         }
-        float hor = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.A))
-            ChangeLine(-1);
-        if (Input.GetKeyDown(KeyCode.D))
-            ChangeLine(1);
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Floor"))
-            jumpReady = true;
+            _jumpReady = true;
     }
 
 }

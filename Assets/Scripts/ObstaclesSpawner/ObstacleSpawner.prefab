@@ -52,5 +52,8 @@ MonoBehaviour:
   - Width: 0.5
     Weight: 1
     Prefab: {fileID: 7205446866306886278, guid: bfd7b6fb61c5caa4e98344288a3e2fd8, type: 3}
+  - Width: 0.5
+    Weight: 1
+    Prefab: {fileID: 6593429452601860515, guid: c212ecf18fa676345b07382280e56e09, type: 3}
   spawnInterval: 3
   _maxSpawnInterval: 3
