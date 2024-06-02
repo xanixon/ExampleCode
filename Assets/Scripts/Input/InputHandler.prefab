@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a39315a9503604b910421d3c38d41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentInputMap:
+  _currentInputMap:
     ChangeLine:
       keyCode: 0
     Jump:
